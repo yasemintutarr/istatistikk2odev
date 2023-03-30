@@ -1,0 +1,73 @@
+---
+title: "Cinsiyet Eşitsizliği Endeksinin Keşifsel Analizi"
+author: 
+  - Yasemin TUTAR [21080467]
+bibliography: ../bibliography/biblio.bib
+csl: ../csl/apa-tr.csl
+header-includes:
+  - \usepackage{polyglossia}
+  - \setmainlanguage{turkish}
+  - \usepackage{booktabs}
+  - \usepackage{caption} 
+  - \captionsetup[table]{skip=10pt}
+output:
+  bookdown::pdf_document2:
+    fig_caption: yes
+    fig_height: 3
+    fig_width: 4
+    keep_tex: no
+    latex_engine: xelatex
+    number_sections: yes
+    toc: no
+geometry: margin=1in
+link-citations: yes
+urlcolor: blue
+fontsize: 12pt
+biblio-style: apalike
+---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(cache = FALSE, echo = TRUE, message = FALSE, warning = FALSE)
+```
+
+<!-- ======================================================================= -->
+<!-- ============================== NOTLAR ================================= -->
+<!-- ======================================================================= -->
+[Github Repo](https://github.com/KULLANICI_ADINIZ/REPO_ADINIZ)
+
+## Giriş
+  Cinsiyet Eşitsizliği Endeksi (GII), Birleşmiş Milletler Kalkınma Programı (UNDP) tarafından İnsani Gelişme Raporu'nun 20. yıl dönümü baskısında ele alınan cinsiyet eşitsizliğinin ölçülmesine yönelik bir endekstir. UNDP'ye göre bu endeks, cinsiyet eşitsizliği nedeniyle bir ülkedeki başarı kaybını ölçmek için birleşik bir ölçüdür.
+  
+   Cinsiyet ayırımcılığı; toplumda kadınların temel hizmetlerden yoksun olması, fırsatlara ve kaynaklara sahip olmada erkeklere oranla eşit olmayan koşullar yaşaması, şiddete uğraması, siyasette ve çalışma yaşamında düşük oranlarda temsil edilmesi biçiminde tanımlanmaktadır.
+  
+   Bu analizimizde 50 ülkeye göre kadınların ve erkeklerin toplumdaki bazı alanlardaki yerlerini inceleyeceğiz. 
+  
+     Bu veri setinde aşağıdaki değişkenler bulunmaktadır:
+     
+  *   **Ülkeler**
+  *   **Ülke GII Değeri**
+  *   **Ülke Rütbesi**
+  *   **Anne ölüm oranı (100.000 canlı doğumda ölüm)**
+  *   **Ergen doğum oranı (15-19 yaş arası 1.000 kadın başına doğum)**
+  *   **Parlamentodaki Koltukların Payı (% kaçının kadınlar tarafından tutulduğu)**
+  *   **En Az Orta Öğretime Sahip Kadın (% 25 yaş ve üzeri olanlar)**
+  *   **En Az Orta Öğretime Sahip Erkek (25 yaş ve üzeri olanların%)**
+  *   **İşgücüne Katılım Oranı Kadın (15 yaş ve üzerinin%)**
+  *   **İşgücüne Katılım Oranı Erkek (15 yaş ve üzerinin%)**
+  
+## Çalışmanın Amacı
+  **Bu çalışmada cinsiyet eşitsizliği endesksi ile ülkelerde bulunan alanlardaki kadın ve erkek oranlarına göre ülkelerin gelişmişlik seviyeleri hakkında çıkarımlarda bulunacağız ve gelişmekte olan ve gelişmemiş ülkeler için cinsiyet ayrımcılığında eksik yönlerini keşfedeceğiz.**
+
+## Literatür 
+  Cinsiyet Eşitliği Endeksi; kadının güçlendirilmesi yaklaşımı yerine cinsiyet yaklaşımını benimser, cinsiyet eşitliğinde daha kapsamlı bir çerçeveyi temel alır ve tüm üye devletler için hem mevcut hem de cinsiyete göre ayrılmış uyumlu, karşılaştırılabilir ve güvenilir veri sağlanması için çağrıda bulunur, zaman içinde karşılaştırma yapma imkanı sağlayarak, cinsiyet eşitliği politikalarını desteklemek için kullanılabilir. [@mudurluugu2008toplumsal]
+    
+   Toplumsal cinsiyet kavramı, geniş açılımları olan, oldukça kapsamlı bir kavramdır. Bize kadınlık ve erkekliğin toplumsal olarak kurulan, öğrenilen kalıplar olduğunu anlatır. En az biyolojik özellikler kadar gerçek olan bu kalıplar, yaşanan yere, ailenin durumuna, zengin ya da yoksul olmaya ve bu gibi etkenlere göre farklılaşır. Yani bütün kadınlar ve bütün erkekler için tek bir kalıp yoktur. Farklı kadınlık ve farklı erkeklik kalıpları vardır. Bu nedenle, toplumsal cinsiyet basitçe “kadın sorunları”na indirgenemeyeceği gibi, kadınlarla erkekler arasındaki ilişkileri de sadece bir ezme/ezilme ilişkisi olarak tanımlamaz. Tersine, kadınlarla erkekler arasındaki ilişkilere değil, bütün toplumsal ilişkilere cinsiyet ilişkileri açısından da bakar.[@ustun2011toplumsal]
+   
+   Uluslararası düzeydeki güncel politikalar, bireyler arası eşitsizliğe yol açmakta ve oluşan eşitsizlik alanlarında kadınlar daha da eşitsiz konumda bulunmaktadır. Toplumsal cinsiyet eşitsizliği nedeniyle kadınlar daha az sağlıklı, daha düşük eğitimli, daha az işgücüne katılan, daha az gelir getiren işlerde çalışan pozisyondadır. Dünya nüfusunun yarısını oluşturan kadınların ikinci sınıf insan muamelesi görmeleri, düşük olan toplumsal statüleri, kaçınılmaz olarak onların verilen sağlık ve eğitim gibi hizmetleri kullanmalarını, hizmetlerden zamanında yararlanmalarını da olumsuz etkilemektedir. Bütün bu nedenlerden dolayı kadının güçlendirilmesi ve konumunun geliştirilmesi, toplumsal cinsiyet eşitliği bakış açısının politika, strateji ve uygulamalara yansıtılması büyük önem taşımaktadır. Cinsiyetler arası eşitliğin sağlanması ve toplumsal cinsiyet ayrımcılığının ortadan kaldırılması doğrultusunda Dünya’da yapılan girişimlere rağmen, henüz istenilen düzeye ulaşılamamıştır. [@bal2014toplumsal] Cinsiyet eşitsizliğindeki değişimlere ilişkin analizlerden temel sonuçlar ortaya çıkıyor. Mesleki entegrasyon derecesi ve kazançlardaki önemli farklılıklar, işe katılma oranı gbi. Okumayan kadınların doğum oranları ve kimi ülkelerde de ortaöğretim derecesine gelememiş kadın oranları çok yüksek. [@cotter2004gender] 
+   
+  Yapılan araştırmalar, toplumsal cinsiyet eşitsizliğinin kadın sağlığını pek çok yönüyle etkilediği sonucuna ulaşılmıştır. Kadınların üreme sağlığını ve ruh sağlığını etkilemektedir. Kadınların cinsiyetleri sebebiyle yaşadığı bu sorunları önlemeye yönelik yapılan eğitim programlarının, sağlık sonuçlarını olumlu etkilediği görülmüştür. Kadınlara yaşam dönemleri boyunca sağlık durumlarını korumak, yükseltmek ve görülebilecek tüm hastalıkları önlemek amacıyla kapsamlı sağlık hizmeti sunulmalıdır. Eşler arası görülen tüm şiddet olaylarını azaltmak, kadının statüsünü, hastalık görülme oranlarını, üreme sağlığını ve sağlık hizmetlerinden yararlanma oranlarını iyileştirebilir. Kadının statüsünün yükseltilmesi, eğitim, ekonomik, siyasi ve bölgesel gelişmişlikle ilgili eşitsizliklerin ortadan kaldırılması ile sağlık eşitsizliklerinin azalacağı öngörülmektedir. Toplumsal cinsiyet eşitliğini sağlamak amacıyla verilen eğitimlerin de, sosyal, ekonomik ve sağlık sonuçlarını yükselteceği, güvensiz cinsel davranışları, erken evliliği ve gebeliği önlemeyi sağlayabileceği öngörülmektedir. [@okin1994gender]
+   
+  
+\newpage
+# Kaynakça {#references}
+<div id="refs"></div>
+
